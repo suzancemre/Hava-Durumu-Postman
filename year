@@ -1,0 +1,6 @@
+pm.test("Check if the year is 2024", function() {
+    var dateHeader = pm.response.headers.get("Date");
+    console.log("Date Header:", dateHeader); // 'Wed, 14 Aug 2024 12:51:05 GMT'
+    var year = dateHeader.substring(12,16); // '2024' kısmını al
+    pm.expect(year).to.equal("2024");
+});
