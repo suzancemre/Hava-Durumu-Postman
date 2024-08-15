@@ -1,0 +1,3 @@
+pm.test("statu kontrolü 200 mü ?",function(){
+pm.response.to.have.status(200);
+});
