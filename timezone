@@ -1,0 +1,5 @@
+pm.test("Date başlığında saat dilimini kontrol et", function() {
+    var dateHeader = pm.response.headers.get("Date");
+    var timezone = dateHeader.split(" ")[5];
+    pm.expect(timezone).to.equals("GMT");
+});
