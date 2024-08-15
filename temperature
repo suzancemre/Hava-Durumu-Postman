@@ -1,0 +1,5 @@
+pm.test("Check if the first temperature is in a reasonable range", function () {
+    var jsonData = pm.response.json();
+    var temperature = jsonData.hourly.temperature_2m[0]; // İlk sıcaklık değerini alıyoruz
+    pm.expect(temperature).to.be.within(-40, 40); // Makul sıcaklık aralığını kontrol ediyoruz
+});
