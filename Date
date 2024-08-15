@@ -1,0 +1,5 @@
+pm.test("Date başlığında günü kontrol et", function() {
+    var dateHeader = pm.response.headers.get("Date");
+    var day = dateHeader.substring(0, 3);
+    pm.expect(day).to.equals("Wed");
+});
