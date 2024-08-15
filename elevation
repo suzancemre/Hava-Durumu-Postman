@@ -1,0 +1,8 @@
+pm.test("Check Elevation",function(){
+   var responseJson = pm.response.json();
+   console.log("Response Body",responseJson);
+   var jsonElevation= responseJson.elevation;
+   pm.expect(jsonElevation).to.equals(40.0);
+   console.log("Elevation",jsonElevation);
+
+});
